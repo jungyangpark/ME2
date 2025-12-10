@@ -1,4 +1,4 @@
-# ME2: Multimodal Solution Explanation Benchmark
+# ME2: Multimodal Explanations for Mathematics Education Benchmark
 
 [![Paper](https://img.shields.io/badge/arXiv-2504.03197-b31b1b.svg)](https://arxiv.org/abs/2504.03197)
 [![Website](https://img.shields.io/badge/Website-ME2-blue)](https://me2-benchmark.github.io/)
