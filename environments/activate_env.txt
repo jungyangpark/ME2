@@ -1,0 +1,9 @@
+3. 새 서버/PC에서 환경 복원
+
+⬇ micromamba 설치 후:
+
+만약 my_env.txt 형식이라면:
+micromamba create --name <new_env_name> --file my_env.txt
+
+만약 my_env.yaml 형식이라면:
+micromamba create --name closed_LLMs --file closedLLMs_env.yaml

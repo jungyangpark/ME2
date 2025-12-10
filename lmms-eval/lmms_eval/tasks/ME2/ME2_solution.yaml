@@ -1,0 +1,175 @@
+dataset_path: jungypark/ME2
+dataset_kwargs:
+  token: True
+task: "ME2_solution"
+test_split: train
+output_type: generate_until
+doc_to_visual: !function utils.doc_to_visual
+doc_to_text: !function utils.doc_to_text
+doc_to_target: solution_text
+generation_kwargs:
+  max_new_tokens: 1024
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+process_results: !function utils.ME2_process_results_solution
+metric_list:
+  - metric: Rouge_1
+    aggregation : !function utils.ME2_rouge1
+    higher_is_better : true
+  - metric: Rouge_2
+    aggregation : !function utils.ME2_rouge2
+    higher_is_better : true
+  - metric: Rouge_L
+    aggregation : !function utils.ME2_rougeL
+    higher_is_better : true
+  - metric: Rouge_Lsum
+    aggregation : !function utils.ME2_rougeLsum
+    higher_is_better : true
+  - metric: Bleu1
+    aggregation : !function utils.ME2_bleu1
+    higher_is_better : true
+  - metric: Bleu2
+    aggregation : !function utils.ME2_bleu2
+    higher_is_better : true
+  - metric: Bleu3
+    aggregation : !function utils.ME2_bleu3
+    higher_is_better : true
+  - metric: Bleu4
+    aggregation : !function utils.ME2_bleu4
+    higher_is_better : true
+  - metric: Meteor
+    aggregation : !function utils.ME2_meteor
+    higher_is_better : true
+  - metric: BertScore_precision
+    aggregation : !function utils.ME2_bertscore_precision
+    higher_is_better : true
+  - metric: BertScore_recall
+    aggregation : !function utils.ME2_bertscore_recall
+    higher_is_better : true
+  - metric: BertScore_f1
+    aggregation : !function utils.ME2_bertscore_f1
+    higher_is_better : true
+  - metric: Correctness
+    aggregation : !function utils.ME2_correctness
+    higher_is_better : true
+  - metric: Correctness_GEC
+    aggregation : !function utils.ME2_correctness_GEC
+    higher_is_better : true
+  - metric: Correctness_GES
+    aggregation : !function utils.ME2_correctness_GES
+    higher_is_better : true
+  - metric: Correctness_GRC
+    aggregation : !function utils.ME2_correctness_GRC
+    higher_is_better : true
+  - metric: Correctness_GRS
+    aggregation : !function utils.ME2_correctness_GRS
+    higher_is_better : true
+  - metric: Reference_alignment
+    aggregation : !function utils.ME2_reference_alignment
+    higher_is_better : true
+  - metric: Reference_alignment_GEC
+    aggregation : !function utils.ME2_reference_alignment_GEC
+    higher_is_better : true
+  - metric: Reference_alignment_GES
+    aggregation : !function utils.ME2_reference_alignment_GES
+    higher_is_better : true
+  - metric: Reference_alignment_GRC
+    aggregation : !function utils.ME2_reference_alignment_GRC
+    higher_is_better : true
+  - metric: Reference_alignment_GRS
+    aggregation : !function utils.ME2_reference_alignment_GRS
+    higher_is_better : true
+  - metric: Visual_reference
+    aggregation : !function utils.ME2_visual_reference
+    higher_is_better : true
+  - metric: Visual_reference_GEC
+    aggregation : !function utils.ME2_visual_reference_GEC
+    higher_is_better : true
+  - metric: Visual_reference_GES
+    aggregation : !function utils.ME2_visual_reference_GES
+    higher_is_better : true
+  - metric: Visual_reference_GRC
+    aggregation : !function utils.ME2_visual_reference_GRC
+    higher_is_better : true
+  - metric: Visual_reference_GRS
+    aggregation : !function utils.ME2_visual_reference_GRS
+    higher_is_better : true
+  - metric: Rouge_1_GE
+    aggregation : !function utils.ME2_rouge1_GE
+    higher_is_better : true
+  - metric: Rouge_1_GR
+    aggregation : !function utils.ME2_rouge1_GR
+    higher_is_better : true
+  - metric: Rouge_2_GE
+    aggregation : !function utils.ME2_rouge2_GE
+    higher_is_better : true
+  - metric: Rouge_2_GR
+    aggregation : !function utils.ME2_rouge2_GR
+    higher_is_better : true
+  - metric: Rouge_L_GE
+    aggregation : !function utils.ME2_rougeL_GE
+    higher_is_better : true
+  - metric: Rouge_L_GR
+    aggregation : !function utils.ME2_rougeL_GR
+    higher_is_better : true
+  - metric: Rouge_Lsum_GE
+    aggregation : !function utils.ME2_rougeLsum_GE
+    higher_is_better : true
+  - metric: Rouge_Lsum_GR
+    aggregation : !function utils.ME2_rougeLsum_GR
+    higher_is_better : true
+  - metric: Bleu1_GE
+    aggregation : !function utils.ME2_bleu1_GE
+    higher_is_better : true
+  - metric: Bleu1_GR
+    aggregation : !function utils.ME2_bleu1_GR
+    higher_is_better : true
+  - metric: Bleu2_GE
+    aggregation : !function utils.ME2_bleu2_GE
+    higher_is_better : true
+  - metric: Bleu2_GR
+    aggregation : !function utils.ME2_bleu2_GR
+    higher_is_better : true
+  - metric: Bleu3_GE
+    aggregation : !function utils.ME2_bleu3_GE
+    higher_is_better : true
+  - metric: Bleu3_GR
+    aggregation : !function utils.ME2_bleu3_GR
+    higher_is_better : true
+  - metric: Bleu4_GE
+    aggregation : !function utils.ME2_bleu4_GE
+    higher_is_better : true
+  - metric: Bleu4_GR
+    aggregation : !function utils.ME2_bleu4_GR
+    higher_is_better : true
+  - metric: Meteor_GE
+    aggregation : !function utils.ME2_meteor_GE
+    higher_is_better : true
+  - metric: Meteor_GR
+    aggregation : !function utils.ME2_meteor_GR
+    higher_is_better : true
+  - metric: BertScore_precision_GE
+    aggregation : !function utils.ME2_bertscore_precision_GE
+    higher_is_better : true
+  - metric: BertScore_precision_GR
+    aggregation : !function utils.ME2_bertscore_precision_GR
+    higher_is_better : true
+  - metric: BertScore_recall_GE
+    aggregation : !function utils.ME2_bertscore_recall_GE
+    higher_is_better : true
+  - metric: BertScore_recall_GR
+    aggregation : !function utils.ME2_bertscore_recall_GR
+    higher_is_better : true
+  - metric: BertScore_f1_GE
+    aggregation : !function utils.ME2_bertscore_f1_GE
+    higher_is_better : true
+  - metric: BertScore_f1_GR
+    aggregation : !function utils.ME2_bertscore_f1_GR
+    higher_is_better : true
+lmms_eval_specific_kwargs:
+  default:
+    task: 2
+metadata:
+  - version: 0.0
