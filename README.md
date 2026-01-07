@@ -10,7 +10,7 @@
 
 Official implementation of the ME2 benchmark accepted at **AAAI 2026 Main Track**.
 
-## 📋 Overview
+## Overview
 
 ME2 is a comprehensive benchmark designed to evaluate AI systems' ability to generate educational explanations that incorporate visual elements, mirroring how human instructors teach using diagrams and visual aids. The benchmark addresses a critical gap in current AI tutoring systems by focusing on **visually grounded mathematical reasoning**.
 
@@ -24,7 +24,7 @@ ME2 is a comprehensive benchmark designed to evaluate AI systems' ability to gen
   - **ME2_solution**: Keypoint-based explanation generation
 - **Comprehensive metrics**: ROUGE, BLEU, METEOR, BERTScore
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -52,7 +52,7 @@ python -m accelerate.commands.launch \
     --verbosity=DEBUG
 ```
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.10+
@@ -74,7 +74,7 @@ cd lmms-eval
 pip install -e .
 ```
 
-## 🌍 Environment Configurations
+## Environment Configurations
 
 We provide pre-configured environments for various models:
 
@@ -88,7 +88,7 @@ We provide pre-configured environments for various models:
 | `qwen_env.yaml` | Qwen-VL | qwen-vl-utils, Levenshtein |
 | `ursamath_env.yaml` | UrsaMath | vllm, flash_attn |
 
-## 📊 Dataset
+## Dataset
 
 The ME2 dataset is hosted on Hugging Face: [`jungypark/ME2`](https://huggingface.co/datasets/jungypark/ME2)
 
@@ -109,7 +109,7 @@ from datasets import load_dataset
 dataset = load_dataset("jungypark/ME2", token=True)
 ```
 
-## 🎯 Evaluation Tasks
+## Evaluation Tasks
 
 ### 1. ME2_ps (Problem Solving)
 
@@ -123,7 +123,7 @@ Identify and describe important visual elements in mathematical diagrams.
 
 Generate complete solutions with visual references.
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### Multi-GPU Evaluation
 
@@ -145,7 +145,7 @@ python -m lmms_eval \
     --output_path ./logs/
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Task YAML Structure
 
@@ -171,7 +171,7 @@ generation_kwargs:
   do_sample: true
 ```
 
-## 📝 Citation
+## Citation
 
 If you use ME2 in your research, please cite:
 
