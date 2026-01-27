@@ -5,8 +5,7 @@
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/jungypark/ME2)
 [![AAAI 2026](https://img.shields.io/badge/AAAI-2026-green)](https://aaai.org/conference/aaai/aaai-26/)
 
-> **Explain with Visual Keypoints Like a Real Mentor!**
-> *A Benchmark for Multimodal Solution Explanation*
+> **Explain with Visual Keypoints Like a Real Mentor! A Benchmark for Multimodal Solution Explanation**
 
 Official implementation of the ME2 benchmark accepted at **AAAI 2026 Main Track**.
 
